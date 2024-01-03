@@ -19,12 +19,14 @@ input{
   justify-content: space-around;
 }
 
+
 .Feint{
   background-image: url('/src/Images/Feint.png');
   background-size: 100%;
   width: 127px;
   height: 195px;
   cursor: pointer;
+  background-repeat: no-repeat;
 }
 
 .Curse{
@@ -49,4 +51,15 @@ input{
   width: 127px;
   height: 195px;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  /* Adjust the width and height as needed to make the image smaller */
+  .Feint,
+  .Curse,
+  .Hex,
+  .BalanceBlade {
+    width: 64px;
+    height: 98px;
+  }
 }
