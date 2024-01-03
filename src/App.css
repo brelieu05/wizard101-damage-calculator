@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.App{
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input{
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Spell-Section{
+  padding: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.Feint{
+  background-image: url('/src/Images/Feint.png');
+  background-size: 100%;
+  width: 127px;
+  height: 195px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Curse{
+  background-image: url('/src/Images/Curse.png');
+  background-size: 100%;
+  width: 127px;
+  height: 195px;
+  cursor: pointer;
+}
+
+.Hex{
+  background-image: url('/src/Images/Hex.png');
+  background-size: 100%;
+  width: 127px;
+  height: 195px;
+  cursor: pointer;
+}
+
+.BalanceBlade{
+  background-image: url('/src/Images/Balance_Blade.png');
+  background-size: 100%;
+  width: 127px;
+  height: 195px;
+  cursor: pointer;
 }
