@@ -15,6 +15,7 @@ function App() {
     hex: 1,
     curse: 1,
     weakness: 1,
+    blade: 1
   });
 
   const applyMultipliers = () => {
@@ -25,7 +26,8 @@ function App() {
       multipliers.balanceBlade *
       multipliers.hex *
       multipliers.curse *
-      multipliers.weakness
+      multipliers.weakness *
+      multipliers.blade
     );
   };
 
@@ -52,6 +54,7 @@ function App() {
       balanceBlade: 1,
       hex: 1,
       curse: 1,
+      blade: 1
     }));
   }
 
@@ -141,6 +144,18 @@ function App() {
           else{ 
             setMultipliers((prev) => ({ ...prev, weakness: 1  }));
             spellSet.delete("Weakness (-25%)");
+            setSpellSet(new Set([...spellSet]));
+          }
+        }}/>
+
+        <button className='Blade' onClick={() => {
+          if (!spellSet.has("Blade (+35%)")) {
+            setMultipliers((prev) => ({ ...prev, blade: 1.35 }));
+            setSpellSet(new Set([...spellSet, "Blade (+35%)"]));
+          }
+          else{ 
+            setMultipliers((prev) => ({ ...prev, blade: 1 }));
+            spellSet.delete("Blade (+35%)");
             setSpellSet(new Set([...spellSet]));
           }
         }}/>
