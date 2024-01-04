@@ -53,6 +53,14 @@ input{
   cursor: pointer;
 }
 
+.Weakness{
+  background-image: url('/src/Images/Weakness.png');
+  background-size: 100%;
+  width: 127px;
+  height: 195px;
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   /* Adjust the width and height as needed to make the image smaller */
   .Feint,
@@ -62,4 +70,8 @@ input{
     width: 64px;
     height: 98px;
   }
+}
+
+.Damage-Section{
+  justify-content: space-between;
 }
