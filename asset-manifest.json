@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/wizard101-damage-calculator/static/css/main.323f7e6c.css",
-    "main.js": "/wizard101-damage-calculator/static/js/main.e3907f6b.js",
+    "main.css": "/wizard101-damage-calculator/static/css/main.95d56429.css",
+    "main.js": "/wizard101-damage-calculator/static/js/main.79142480.js",
     "static/js/787.95a84bc5.chunk.js": "/wizard101-damage-calculator/static/js/787.95a84bc5.chunk.js",
     "static/media/Curse.png": "/wizard101-damage-calculator/static/media/Curse.8b19d46d8f447d34b512.png",
     "static/media/Hex.png": "/wizard101-damage-calculator/static/media/Hex.24b170527b2fcea19b63.png",
     "static/media/Feint.png": "/wizard101-damage-calculator/static/media/Feint.6edc7e69c661c6ee0ecc.png",
+    "static/media/Weakness.png": "/wizard101-damage-calculator/static/media/Weakness.51eb38331e595327e344.png",
     "static/media/Balance_Blade.png": "/wizard101-damage-calculator/static/media/Balance_Blade.2b448b0910ff713e586d.png",
     "index.html": "/wizard101-damage-calculator/index.html",
-    "main.323f7e6c.css.map": "/wizard101-damage-calculator/static/css/main.323f7e6c.css.map",
-    "main.e3907f6b.js.map": "/wizard101-damage-calculator/static/js/main.e3907f6b.js.map",
+    "main.95d56429.css.map": "/wizard101-damage-calculator/static/css/main.95d56429.css.map",
+    "main.79142480.js.map": "/wizard101-damage-calculator/static/js/main.79142480.js.map",
     "787.95a84bc5.chunk.js.map": "/wizard101-damage-calculator/static/js/787.95a84bc5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.323f7e6c.css",
-    "static/js/main.e3907f6b.js"
+    "static/css/main.95d56429.css",
+    "static/js/main.79142480.js"
   ]
 }
