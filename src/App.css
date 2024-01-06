@@ -16,70 +16,43 @@ input{
 .Spell-Section{
   padding: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
-
-.Feint{
-  background-image: url('/src/Images/Feint.png');
+.Spell{
   background-size: 100%;
   width: 127px;
-  height: 195px;
+  height: auto;
   cursor: pointer;
   background-repeat: no-repeat;
+  aspect-ratio: 127 / 195;
 }
 
-.Curse{
+#Feint{
+  background-image: url('/src/Images/Feint.png');
+}
+
+#Curse{
   background-image: url('/src/Images/Curse.png');
-  background-size: 100%;
-  width: 127px;
-  height: 195px;
-  cursor: pointer;
 }
 
-.Hex{
+#Hex{
   background-image: url('/src/Images/Hex.png');
-  background-size: 100%;
-  width: 127px;
-  height: 195px;
-  cursor: pointer;
 }
 
-.BalanceBlade{
+#BalanceBlade{
   background-image: url('/src/Images/Balance_Blade.png');
-  background-size: 100%;
-  width: 127px;
-  height: 195px;
-  cursor: pointer;
 }
 
-.Weakness{
+#Weakness{
   background-image: url('/src/Images/Weakness.png');
-  background-size: 100%;
-  width: 127px;
-  height: 195px;
-  cursor: pointer;
 }
 
-.Blade{
+#Blade{
   background-image: url('/src/Images/Deathblade.png');
-  background-size: 100%;
-  width: 127px;
-  height: 195px;
-  cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  /* Adjust the width and height as needed to make the image smaller */
-  .Feint,
-  .Curse,
-  .Hex,
-  .BalanceBlade {
-    width: 64px;
-    height: 98px;
-  }
-}
 
 .Damage-Section{
-  justify-content: space-between;
+  display: flex;
 }

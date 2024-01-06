@@ -72,23 +72,27 @@ function App() {
   return (
     <div className="App">
       <div className='Damage-Section'>
-        <input placeholder='Base Damage' type='number' value={inputValue} onChange={handleInputChange}/>
-        <input placeholder="Base Multiplier" className='BaseStat' type="number" value={baseStat} onChange={(event) => {
-            const newValue = event.target.value;
-            setBaseStat(newValue);
-            setMultipliers((prev) => ({ ...prev, base: newValue }));
-            console.log(newValue);
-        }}/>
-        <button onClick={() => {
-            addDamage(100);
-          }}>+100 Damage</button>
+        <div className='Damage-Buttons'>
+          <input placeholder='Base Damage' type='number' value={inputValue} onChange={handleInputChange}/>
+          <input placeholder="Base Multiplier" className='BaseStat' type="number" value={baseStat} onChange={(event) => {
+              const newValue = event.target.value;
+              setBaseStat(newValue);
+              setMultipliers((prev) => ({ ...prev, base: newValue }));
+              console.log(newValue);
+          }}/>
+        </div>
+        <div>
           <button onClick={() => {
-            addDamage(-100);
-          }}>-100 Damage</button>
+              addDamage(100);
+            }}>+100 Damage</button>
+            <button onClick={() => {
+              addDamage(-100);
+            }}>-100 Damage</button>
+        </div>
       </div>
 
       <div className='Spell-Section'>
-        <button className='Feint' onClick={() => {
+        <button className='Spell' id='Feint' onClick={() => {
           if (!spellSet.has("Feint (+70%)")) {
             setMultipliers((prev) => ({ ...prev, feint: 1.7 }));
             setSpellSet(new Set([...spellSet, "Feint (+70%)"]));
@@ -100,7 +104,7 @@ function App() {
           }
         }}/>
 
-        <button className='BalanceBlade' onClick={() => {
+        <button className='Spell' id='BalanceBlade' onClick={() => {
           if (!spellSet.has("Balance Blade (+25%)")){
             setMultipliers((prev) => ({ ...prev, balanceBlade: 1.25 }));
             setSpellSet(new Set([...spellSet, "Balance Blade (+25%)"]));
@@ -112,7 +116,7 @@ function App() {
           }
         }}/>
 
-        <button className='Hex' onClick={() => {
+        <button className='Spell' id='Hex' onClick={() => {
           if (!spellSet.has("Hex (+30%)")) {
             setMultipliers((prev) => ({ ...prev, hex: 1.3 }));
             setSpellSet(new Set([...spellSet, "Hex (+30%)"]));
@@ -124,7 +128,7 @@ function App() {
           }
         }}/>
 
-        <button className='Curse' onClick={() => {
+        <button className='Spell' id='Curse' onClick={() => {
           if (!spellSet.has("Curse (+30%)")) {
             setMultipliers((prev) => ({ ...prev, curse: 1.3 }));
             setSpellSet(new Set([...spellSet, "Curse (+30%)"]));
@@ -136,7 +140,7 @@ function App() {
           }
         }}/>
 
-        <button className='Weakness' onClick={() => {
+        <button className='Spell' id='Weakness' onClick={() => {
           if (!spellSet.has("Weakness (-25%)")) {
             setMultipliers((prev) => ({ ...prev, weakness: 0.75 }));
             setSpellSet(new Set([...spellSet, "Weakness (-25%)"]));
@@ -148,7 +152,7 @@ function App() {
           }
         }}/>
 
-        <button className='Blade' onClick={() => {
+        <button className='Spell' id='Blade' onClick={() => {
           if (!spellSet.has("Blade (+35%)")) {
             setMultipliers((prev) => ({ ...prev, blade: 1.35 }));
             setSpellSet(new Set([...spellSet, "Blade (+35%)"]));
