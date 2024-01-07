@@ -6,8 +6,12 @@ function App() {
 
   const [spellSet, setSpellSet] = useState(new Set());
   const [damage, setDamage] = useState(0);
-  const [baseStat, setBaseStat] = useState(0);
+  const [baseStat, setBaseStat] = useState('');
   const [inputValue, setInputValue] = useState('');
+  const [boostDamage, setBoostDamage] = useState('');
+  const [boostBool, setBoostBool] = useState(false);
+  const [resistDamage, setResistDamage] = useState('');
+  const [resistBool, setResistBool] = useState(false);
   const [multipliers, setMultipliers] = useState({
     base: baseStat,
     feint: 1,
@@ -15,7 +19,9 @@ function App() {
     hex: 1,
     curse: 1,
     weakness: 1,
-    blade: 1
+    blade: 1,
+    boost: boostDamage,
+    resist: resistDamage,
   });
 
   const applyMultipliers = () => {
@@ -27,7 +33,9 @@ function App() {
       multipliers.hex *
       multipliers.curse *
       multipliers.weakness *
-      multipliers.blade
+      multipliers.blade *
+      (boostBool && boostDamage > 0 ? (1 + (boostDamage - 1)*0.01) : 1) *
+      (resistBool && resistDamage > 0 ? ((resistDamage - 1)*0.1) : 1)
     );
   };
 
@@ -54,7 +62,8 @@ function App() {
       balanceBlade: 1,
       hex: 1,
       curse: 1,
-      blade: 1
+      blade: 1,
+      boost: 0
     }));
   }
 
@@ -73,8 +82,8 @@ function App() {
     <div className="App">
       <div className='Damage-Section'>
         <div className='Damage-Buttons'>
-          <input placeholder='Base Damage' type='number' value={inputValue} onChange={handleInputChange}/>
-          <input placeholder="Base Multiplier" className='BaseStat' type="number" value={baseStat} onChange={(event) => {
+          <input placeholder='Base Damage' className='Damage-Input' type='number' value={inputValue} onChange={handleInputChange}/>
+          <input placeholder="Base Multiplier" className='BaseStat' type='number' value={baseStat} onChange={(event) => {
               const newValue = event.target.value;
               setBaseStat(newValue);
               setMultipliers((prev) => ({ ...prev, base: newValue }));
@@ -89,6 +98,24 @@ function App() {
               addDamage(-100);
             }}>-100 Damage</button>
         </div>
+        <div className='Boost-Section'>
+          <input type='checkbox' checked={boostBool} onChange={() => {
+            const newValue = !boostBool;
+            setBoostBool(newValue);
+          }}/>
+          <h2>Boost?</h2>
+
+          <input type='checkbox' checked={resistBool} onChange={() => {
+            const newValue = !resistBool;
+            setResistBool(newValue);
+          }}/>
+          <h2>Resist?</h2>
+        </div>
+        <input type='number' className='Enemy-Rank' placeholder='Enemy Rank' value={boostDamage} onChange={(event) => {
+          const newValue = event.target.value;
+          setBoostDamage(newValue);
+          setResistDamage(newValue);
+        }}/>
       </div>
 
       <div className='Spell-Section'>

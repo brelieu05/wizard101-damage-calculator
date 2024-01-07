@@ -2,7 +2,7 @@
   padding: 20px;
 }
 
-input{
+.BaseStat, .Damage-Input, .Enemy-Rank{
   width: 200px;
   height: 30px;
   border-radius: 5px;
@@ -55,4 +55,18 @@ input{
 
 .Damage-Section{
   display: flex;
+  align-items: center;
+}
+
+.Damage-Section > *{
+  margin-right: 50px;
+}
+
+.Boost-Section{
+  display: flex;
+  align-items: center;
+}
+
+.Boost-Section > *{
+  margin-right: 10px;
 }
