@@ -34,7 +34,7 @@ function App() {
       multipliers.curse *
       multipliers.weakness *
       multipliers.blade *
-      (boostBool && boostDamage > 0 ? (1 + (boostDamage - 1)*0.01) : 1) *
+      (boostBool && boostDamage > 0 ? (1 + (boostDamage - 1)*0.1) : 1) *
       (resistBool && resistDamage > 0 ? ((resistDamage - 1)*0.1) : 1)
     );
   };
