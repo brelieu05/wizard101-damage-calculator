@@ -54,7 +54,8 @@ function App() {
     setDamage(updatedDamage);
     setSpellSet(new Set());
     setInputValue('');
-    setBaseStat(0);
+    setBaseStat('');
+    setBoostDamage('');
     setMultipliers((prev) => ({
       ...prev,
       base: 0,
@@ -63,7 +64,8 @@ function App() {
       hex: 1,
       curse: 1,
       blade: 1,
-      boost: 0
+      boost: 0,
+      resist: 0,
     }));
   }
 
