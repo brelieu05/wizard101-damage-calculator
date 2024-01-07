@@ -35,7 +35,7 @@ function App() {
       multipliers.weakness *
       multipliers.blade *
       (boostBool && boostDamage > 0 ? (1 + (boostDamage - 1)*0.1) : 1) *
-      (resistBool && resistDamage > 0 ? ((resistDamage - 1)*0.1) : 1)
+      (resistBool && resistDamage > 0 ? (1-(resistDamage)*0.01) : 1)
     );
   };
 
